@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'ideas/index'
   resources :ideas
     resources :comments
-  root 'home#index'
+  root 'ideas#index'
 end
