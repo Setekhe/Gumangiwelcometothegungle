@@ -1,0 +1,15 @@
+<h1> New Learning Idea </h1>
+<%= form_with scope: :idea, url: ideas_path, local: true do |form| %>
+    <%= form.label :idea_title, "Idea" %><br>
+    <%= form.text_field :idea_title %>
+  </p>
+
+  <p>
+    <%= form.label :details %><br>
+    <%= form.text_area :details %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
