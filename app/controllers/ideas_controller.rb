@@ -6,8 +6,11 @@ class IdeasController < ApplicationController
   end
   def create
     @idea = Idea.new(idea_params)
-    @idea.save
-    redirect_to @idea
+    if @idea.save
+      redirect_to @idea
+    else
+      render 'new'
+    end
   end
   def show
     @idea = Idea.find(params[:id])
