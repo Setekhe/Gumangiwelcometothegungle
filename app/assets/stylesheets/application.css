@@ -18,5 +18,8 @@ body {
        Background-repeat: no-repeat;
        Background-position: center center;
        Background-size: cover;
-       Text-align: center;
+       Text-align: left;
+}
+.title {
+  text-align: center;
 }
