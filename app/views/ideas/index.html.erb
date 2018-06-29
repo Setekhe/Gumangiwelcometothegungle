@@ -1,0 +1,17 @@
+<h1>Proposed Ideas</h1>
+
+<table>
+  <tr>
+    <th>Idea</th>
+    <th>Details</th>
+    <th></th>
+  </tr>
+
+  <% @ideas.each do |idea| %>
+    <tr>
+      <td><%= idea.idea_title %></td>
+      <td><%= idea.details %></td>
+      <td><%= link_to 'Show', idea_path(idea) %></td>
+    </tr>
+  <% end %>
+</table>
