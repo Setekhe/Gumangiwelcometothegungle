@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   get 'ideas/index'
   resources :ideas do
     resources :comments

@@ -1,0 +1,2 @@
+class UserControl < ApplicationRecord
+end
