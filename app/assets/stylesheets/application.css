@@ -14,17 +14,22 @@
  *= require_self
  */
 body {
-       Background-color: white;
-       Background-repeat: no-repeat;
-       Background-position: center center;
-       Background-size: cover;
-       Text-align: left;
-}
-.ttext{
   padding-right: 35px;
   padding-left: 35px;
+  Background-color: white;
+  Background-repeat: no-repeat;
+  Background-position: center center;
+  Background-size: cover;
+  Text-align: left;
 }
-
+.Clickables{
+border-style: solid;
+border-width: 0.5px;
+}
+.Clickables:hover {
+border-style: dashed;
+background-color:#ffce75;
+}
 .title {
   text-align: center;
 }

@@ -1,9 +1,9 @@
 <h1 class = "title">Amigo Code</h1>
-<h3 class="ttext"> A Forum of Friendly Faces</h3>
-<h4 class = "ttext"> Each month, over 1000 developers come to Amigo Code to learn, share their knowledge, and build their careers.
+<h3> A Forum of Friendly Faces</h3>
+<h4> Each month, over 1000 developers come to Amigo Code to learn, share their knowledge, and build their careers.
   Join the world’s largest friendly community.</h4>
 <% @ideas.each do |idea| %>
-    <div class="ttext">
+    <div class="Clickables">
        <%= link_to idea.idea_title, idea_path(idea)%>
       <br><%= idea.details %>
        Created at <%=idea.created_at%> by  <%=idea.name%>
