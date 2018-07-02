@@ -8,4 +8,9 @@
   <strong>Details:</strong>
   <%= comment.details %>
 </p>
+<p>
+  <%= link_to 'Remove Comment', [comment.idea, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
 </div>

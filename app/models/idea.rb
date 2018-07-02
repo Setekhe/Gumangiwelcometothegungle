@@ -1,5 +1,5 @@
 class Idea < ApplicationRecord
-  has_many :comments
+  has_many :comments, dependent: :destroy
   validates :idea_title, presence: true,
                    length: { minimum: 3 }
   validates :details, presence: true,

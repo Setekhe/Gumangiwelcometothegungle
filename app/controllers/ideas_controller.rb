@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+ http_basic_authenticate_with name: "Superadmin", password: "1234", only: :destroy
   def index
     @ideas = Idea.all
   end
@@ -15,8 +16,14 @@ class IdeasController < ApplicationController
   def show
     @idea = Idea.find(params[:id])
   end
+  def destroy
+  @idea = Idea.find(params[:id])
+  @idea.destroy
+
+  redirect_to ideas_path
+end
   private
     def idea_params
-      params.require(:idea).permit(:idea_title, :details, :name)
+      params.require(:idea).permit(:idea_title, :details, :name, :id)
     end
 end
