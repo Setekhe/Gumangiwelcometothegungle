@@ -5,7 +5,7 @@
 <% @ideas.each do |idea| %>
     <div class="Clickables">
        <%= link_to idea.idea_title, idea_path(idea)%>
-      <br><%= idea.details %>
+      <br><%= idea.formatted_details %>
        Created at <%=idea.created_at%> by  <%=idea.name%>
     </div>
 <% end %>
