@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_07_02_143239) do
     t.string "name"
   end
 
-  create_table "user_controls", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "display_name"
     t.string "user_name"
     t.string "password"
