@@ -29,6 +29,10 @@ background-color: orange;
   left: 0;
   top: 0;
 }
+.border{
+  border-style: solid;
+  border-width: 0.5px;
+}
 .navbar-brand{
 color: black;
 }
