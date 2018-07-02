@@ -20,6 +20,11 @@ body {
        Background-size: cover;
        Text-align: left;
 }
+.ttext{
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
 .title {
   text-align: center;
 }
