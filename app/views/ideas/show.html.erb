@@ -7,5 +7,12 @@
   <strong>Details:</strong>
   <%= @idea.details %>
 </p>
+<p>
+  <strong>Created at</strong>
+  <%= @idea.created_at %>
+  <strong> by</strong>
+  <%= @idea.name %>
+
+</p>
 <%= link_to '> New Learning Idea <', new_idea_path %>
 <%= link_to '> Home <', ideas_path%>

@@ -6,6 +6,6 @@
     <div class="Clickables">
        <%= link_to idea.idea_title, idea_path(idea)%>
       <br><%= idea.formatted_details %>
-       Created at <%=idea.created_at%> by  <%=idea.name%>
+       <div class="pull-right"> Created at <%=idea.created_at.strftime("%d/%m/%Y at %I:%M")%> by  <%=idea.name%> </div>
     </div>
 <% end %>
