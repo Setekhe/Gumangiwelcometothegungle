@@ -1,0 +1,13 @@
+<%= form_with(model: [ @idea, @idea.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :details %><br>
+    <%= form.text_area :details %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

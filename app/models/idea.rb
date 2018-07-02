@@ -1,4 +1,5 @@
 class Idea < ApplicationRecord
+  has_many :comments
   validates :idea_title, presence: true,
                    length: { minimum: 3 }
   validates :details, presence: true,

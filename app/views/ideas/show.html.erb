@@ -1,8 +1,4 @@
-<p>
-  <strong>Idea:</strong>
-  <%= @idea.idea_title %>
-</p>
-
+<h1> <%= @idea.idea_title %></h1>
 <p>
   <strong>Details:</strong>
   <%= @idea.details %>
@@ -14,5 +10,11 @@
   <%= @idea.name %>
 
 </p>
+<h2>Comments</h2>
+<%= render @idea.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
 <%= link_to '> New Learning Idea <', new_idea_path %>
 <%= link_to '> Home <', ideas_path%>
