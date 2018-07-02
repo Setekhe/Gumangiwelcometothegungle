@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1 class="title"> Sign up now for free</h1>
+<%= form_with scope: :user, url: users_new_path, local: true do |form| %>
+<div class="userbox">
+  <div class="furtherbox"
+<p>
+  <%= form.label :display_name %><br>
+  <%= form.text_field :display_name %>
+</p>
+<p>
+  <%= form.label :user_name %><br>
+  <%= form.text_field :user_name %>
+</p>
+<p>
+  <%= form.label :password %><br>
+  <%= form.text_field :password %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+</div>
+</div>
+<% end %>

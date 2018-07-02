@@ -23,11 +23,22 @@ body {
   Background-size: cover;
   Text-align: left;
 }
-
+.furtherbox{
+  padding: 20px;
+}
 .navbar-custom{
 background-color: orange;
   left: 0;
   top: 0;
+}
+.userbox{
+  border-style: solid;
+  border-width: 0.5px;
+  width: 20%;
+  align: center center;
+  background-color: orange;
+  margin: auto;
+
 }
 .border{
   border-style: solid;
