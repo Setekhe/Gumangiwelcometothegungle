@@ -5,10 +5,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render 'signed_up'
+      redirect_to '/users/signed_up'
     else
       render 'new'
     end
+  end
+
+  def signed_up
   end
 
   def user_params
