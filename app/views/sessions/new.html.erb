@@ -1,5 +1,7 @@
 <h1 class="title"> Login now</h1>
 <%= form_with scope: :session, url: sessions_path, local: true do |form| %>
+<div class="userbox">
+  <div class="furtherbox">
 <p>
   <%= form.label :user_name %><br>
   <%= form.text_field :user_name %>
