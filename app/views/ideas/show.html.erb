@@ -1,4 +1,9 @@
-<button type="button" class="btn btn-success postiontopright">Mark as complete</button>
+<%if current_user && current_user.id == @idea.user_id && comment.complete==false%>
+<a href="/ideas/<%= @idea.id%>/complete" type="button" class="btn btn-success postiontopright">Mark as complete</a>
+<%elsif comment.complete == true%>
+
+<%end %>
+
 <h1> <%= @idea.idea_title %></h1>
 <p>
   <strong>Details:</strong>

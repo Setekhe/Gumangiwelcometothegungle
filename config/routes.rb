@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :ideas do
     resources :comments
   end
+  get 'ideas/:id/complete', controller: :ideas, action: :complete
   root 'ideas#index'
 end

@@ -8,7 +8,7 @@
        <%= link_to idea.idea_title, idea_path(idea)%>
       <br><%= idea.formatted_details %>
        <div class="pull-right"> Created at <%=idea.created_at.strftime("%d/%m/%Y at %I:%M")%> by  <%=idea.name%> </div>
-       <% if current_user.admin == true %>
+       <% if current_user && current_user.admin == true %>
        <p> <%= link_to 'Remove', idea_path(idea),
               method: :delete,
               data: { confirm: 'Are you sure?' } %> </p>
