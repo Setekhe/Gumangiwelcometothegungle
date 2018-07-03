@@ -1,10 +1,13 @@
 class IdeasController < ApplicationController
- http_basic_authenticate_with name: "Superadmin", password: "1234", only: :destroy
   def index
     @ideas = Idea.all
   end
   def new
-    @idea = Idea.new
+    if session[:user_id]
+      @idea = Idea.new
+    else
+      redirect_to new_session_path
+    end
   end
   def create
     @idea = Idea.new(idea_params)

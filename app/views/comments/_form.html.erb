@@ -1,13 +1,19 @@
-<%= form_with(model: [ @idea, @idea.comments.build ], local: true) do |form| %>
+<% if session[:user_id] %>
+  <%= form_with(model: [ @idea, @idea.comments.build ], local: true) do |form| %>
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name, class: "form-control", value: current_user.display_name, readonly: true %>
+    </p>
+    <p>
+      <%= form.label :details %><br>
+      <%= form.text_area :details, class: "form-control" %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+<% else %>
   <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name, class: "form-control" %>
-  </p>
-  <p>
-    <%= form.label :details %><br>
-    <%= form.text_area :details, class: "form-control" %>
-  </p>
-  <p>
-    <%= form.submit %>
+    <strong>Please Log In to add comments </strong>
   </p>
 <% end %>

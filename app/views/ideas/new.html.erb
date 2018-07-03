@@ -24,9 +24,8 @@
   </p>
   <p>
     <%= form.label :name %><br>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.text_field :name, class: "form-control", value: current_user.display_name, readonly: true %>
   </p>
-
   <p>
     <%= form.submit %>
   </p>
