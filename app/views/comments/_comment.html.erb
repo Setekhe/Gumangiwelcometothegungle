@@ -9,7 +9,7 @@
   <strong>Details:</strong>
   <%= comment.details %>
 </p>
-<% if current_user.admin = true %>
+<% if current_user.admin == true %>
 <p>
   <%= link_to 'Remove Comment', [comment.idea, comment],
                method: :delete,
