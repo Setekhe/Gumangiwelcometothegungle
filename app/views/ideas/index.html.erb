@@ -4,7 +4,7 @@
   Join the world’s largest friendly community.</h4>
 <% @ideas.each do |idea| %>
     <div class="Clickables">
-      <div class="searchbox"
+      <div class="searchbox">
        <%= link_to idea.idea_title, idea_path(idea)%>
       <br><%= idea.formatted_details %>
        <div class="pull-right"> Created at <%=idea.created_at.strftime("%d/%m/%Y at %I:%M")%> by  <%=idea.name%> </div>
