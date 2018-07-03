@@ -23,6 +23,10 @@ body {
   Background-size: cover;
   Text-align: left;
 }
+.searchbox{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .furtherbox{
   padding: 20px;
 }
