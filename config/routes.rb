@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  resources :users, only: [:new, :create]
+  
   get 'ideas/index'
   resources :ideas do
     resources :comments
