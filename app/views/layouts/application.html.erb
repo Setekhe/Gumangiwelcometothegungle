@@ -30,8 +30,14 @@
       </form>
       <ul class="nav navbar-nav navbar-right ">
           <li><%= link_to "Create New Idea", new_idea_path, class: "black-text"%>
-          <li><a href="/users/new" class= "black-text"><span class="glyphicon glyphicon-user black-text"></span> Sign Up</a></li>
-          <li><a href="/sessions/new" class="black-text"><span class="glyphicon glyphicon-log-in black-text"></span> Login</a></li>
+          <% if current_user %>
+            <li><a class= "black-text"> <%= current_user.display_name %></a></li>
+            <li><a href="/sessions/destroy" class= "black-text"><span class="glyphicon glyphicon-log-out black-text"></span> Logout </a></li>
+
+          <% else %>
+            <li><a href="/users/new" class= "black-text"><span class="glyphicon glyphicon-user black-text"></span> Sign Up</a></li>
+            <li><a href="/sessions/new" class="black-text"><span class="glyphicon glyphicon-log-in black-text"></span> Login</a></li>
+          <% end %>
       </ul>
     </div>
   </nav>
