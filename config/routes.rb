@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'users/signed_up'
 
   get 'sessions/new'
+  post '/sessions', controller: :sessions, action: :create
   get 'ideas/index'
   resources :ideas do
     resources :comments

@@ -1,0 +1,29 @@
+<h1 class="title"> Login now</h1>
+<%= form_with scope: :session, url: sessions_path, local: true do |form| %>
+<p>
+  <%= form.label :user_name %><br>
+  <%= form.text_field :user_name %>
+</p>
+<p>
+  <%= form.label :password %><br>
+  <%= form.text_field :password, id: "myInput", type: 'password'%>
+</p>
+<input type="checkbox" onclick="myFunction()" ><strong> Show Password</strong>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+
+<p>
+  <%= form.submit %>
+</p>
+</div>
+</div>
+<% end %>
