@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-   http_basic_authenticate_with name: "Superadmin", password: "1234", only: :destroy
   def create
     @idea = Idea.find(params[:idea_id])
     @comment = @idea.comments.create(comment_params)
