@@ -14,13 +14,7 @@
   <%= form.label :password %><br>
   <%= form.text_field :password, id: "myInput", type: 'password'%>
 </p>
-<p>
-  <%= form.submit %>
-</p>
-</div>
-</div>
-<% end %>
-<input type="checkbox" onclick="myFunction()" >Show Password
+<input type="checkbox" onclick="myFunction()" ><strong> Show Password</strong>
 
 <script>
 function myFunction() {
@@ -32,3 +26,10 @@ function myFunction() {
     }
 }
 </script>
+
+<p>
+  <%= form.submit %>
+</p>
+</div>
+</div>
+<% end %>
