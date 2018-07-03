@@ -16,6 +16,19 @@
  .postiontopright{
 float: right;
  }
+ .red{
+   color:red;
+ }
+ .notsobigger{
+   font-size: 20px;
+ }
+ .green{
+    color:green;
+ }
+ .bigger{
+   font-size: 40px;
+   color:green;
+ }
 body {
   padding-right: 35px;
   padding-left: 35px;

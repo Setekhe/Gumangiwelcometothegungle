@@ -1,7 +1,9 @@
-<%if current_user && current_user.id == @idea.user_id && comment.complete==false%>
+<%if current_user && current_user.id == @idea.user_id && @idea.complete.blank?%>
 <a href="/ideas/<%= @idea.id%>/complete" type="button" class="btn btn-success postiontopright">Mark as complete</a>
-<%elsif comment.complete == true%>
-
+<%elsif @idea.complete == true%>
+<div class = "bigger">
+<span class="glyphicon glyphicon-ok-sign postiontopright" ></span>
+</div>
 <%end %>
 
 <h1> <%= @idea.idea_title %></h1>

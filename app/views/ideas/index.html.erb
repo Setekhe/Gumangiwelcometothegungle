@@ -5,6 +5,16 @@
 <% @ideas.each do |idea| %>
     <div class="Clickables">
       <div class="searchbox">
+        <%if idea.complete == true%>
+        <div class = "notsobigger green">
+        <span class="glyphicon glyphicon-ok-sign postiontopright" ></span>
+        </div>
+        <%end %>
+        <%if idea.complete.blank? == true%>
+        <div class = "notsobigger red">
+        <span class="glyphicon glyphicon-remove-sign postiontopright" ></span>
+        </div>
+        <%end %>
        <%= link_to idea.idea_title, idea_path(idea)%>
       <br><%= idea.formatted_details %>
        <div class="pull-right"> Created at <%=idea.created_at.strftime("%d/%m/%Y at %I:%M")%> by  <%=idea.name%> </div>
