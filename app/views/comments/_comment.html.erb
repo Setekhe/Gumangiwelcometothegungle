@@ -1,19 +1,21 @@
 
 <div class="border">
-<p>
-  <strong>Name:</strong>
-  <%= comment.name %>
-</p>
+    <div>
+      <p>
+        <strong>Name:</strong>
+        <%= comment.name %>
+      </p>
 
-<p>
-  <strong>Details:</strong>
-  <%= comment.details %>
-</p>
-<% if current_user.admin == true %>
-<p>
-  <%= link_to 'Remove Comment', [comment.idea, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
-<% end %>
+      <p>
+        <strong>Details:</strong>
+        <%= comment.details %>
+      </p>
+      <% if current_user.admin == true %>
+      <p>
+        <%= link_to 'Remove Comment', [comment.idea, comment],
+                     method: :delete,
+                     data: { confirm: 'Are you sure?' } %>
+      </p>
+      <% end %>
+    </div>
 </div>
