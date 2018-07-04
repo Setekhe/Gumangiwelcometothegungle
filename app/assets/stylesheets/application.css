@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ .postiontopright{
+float: right;
+ }
 body {
   padding-right: 35px;
   padding-left: 35px;
